@@ -1,0 +1,22 @@
+# dsh-file-selector bundle patch.
+#
+# This is the layer a profile receives when it lists this package in
+# `dsh.profile.bundles` (which `dsh plugin add dsh-file-selector` does
+# automatically, because package.json declares `dsh.bundle.patch`).
+#
+# The row is resolved by PACKAGE NAME (not by path), so Node's module
+# resolution finds the installed copy. `name` must stay in sync with
+# package.json `name`; it is quoted because `@` cannot open a plain YAML
+# scalar.
+#
+# The row is ALSO what composes this plugin's browser bundle: the client
+# graph is built from the resolved config, so removing the row would remove
+# the feature. The host half behind it is a no-op (see src/index.ts) — every
+# capability lives in the browser half, which rides `dsh.client.platform: web`
+# in package.json.
+#
+# There is no `config` block: the plugin reads nothing on the host, so it has
+# nothing to configure.
+- insert:
+    - id: file-selector
+      name: 'dsh-file-selector'

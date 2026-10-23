@@ -1,0 +1,12 @@
+# Dependencies are never committed.
+node_modules/
+
+# lib/ IS committed on purpose: `dsh plugin add` installs straight from the
+# repository and runs no build script, so the shipped artifacts have to be in
+# the tree. Rebuild with `npm run build` before every version bump.
+
+# Local noise.
+*.log
+pnpm-debug.log*
+.DS_Store
+Thumbs.db
