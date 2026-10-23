@@ -1,8 +1,7 @@
 # dsh-file-selector
 
 [![ci](https://github.com/chiqianyushao/dsh-file-selector/actions/workflows/ci.yml/badge.svg)](https://github.com/chiqianyushao/dsh-file-selector/actions/workflows/ci.yml)
-[![npm](https://img.shields.io/npm/v/dsh-file-selector.svg)](https://www.npmjs.com/package/dsh-file-selector)
-[![license](https://img.shields.io/npm/l/dsh-file-selector.svg)](LICENSE)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 给 DSH（DeepSeek Harness）**自带**的文件浏览器和文档预览补上「选择」这一半：把文件路径，或预览里
 划选出的行范围，追加进输入框草稿。**永远不会自动发送** —— 代码里没有任何一处调用 `submit`。
@@ -14,8 +13,13 @@
 ## 安装
 
 ```bash
-dsh plugin add dsh-file-selector                     # 从 npm
-dsh plugin add chiqianyushao/dsh-file-selector       # 或直接从 GitHub
+dsh plugin add chiqianyushao/dsh-file-selector
+```
+
+或者用 GitHub Release 上预构建的 tarball（同样不需要构建，适合不想走 git 依赖的环境）：
+
+```bash
+dsh plugin add https://github.com/chiqianyushao/dsh-file-selector/releases/latest/download/dsh-file-selector.tgz
 ```
 
 DSH Desktop：侧栏 **插件** → **添加插件** → 粘贴 `https://github.com/chiqianyushao/dsh-file-selector`
