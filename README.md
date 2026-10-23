@@ -1,5 +1,9 @@
 # dsh-file-selector
 
+[![ci](https://github.com/chiqianyushao/dsh-file-selector/actions/workflows/ci.yml/badge.svg)](https://github.com/chiqianyushao/dsh-file-selector/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/dsh-file-selector.svg)](https://www.npmjs.com/package/dsh-file-selector)
+[![license](https://img.shields.io/npm/l/dsh-file-selector.svg)](LICENSE)
+
 给 DSH（DeepSeek Harness）**自带**的文件浏览器和文档预览补上「选择」这一半：把文件路径，或预览里
 划选出的行范围，追加进输入框草稿。**永远不会自动发送** —— 代码里没有任何一处调用 `submit`。
 
